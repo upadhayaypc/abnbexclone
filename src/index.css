@@ -10,7 +10,7 @@ body {
 nav {
     height: 70px;
     display: flex;
-    background-color: cyan;
+    background-color: whitesmoke;
     padding: 20px 36px;
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
@@ -34,4 +34,13 @@ section {
 
 .hero--text {
     margin-top: 0;  
+}
+
+.cardLineContent{
+    padding-right: 10px;
+    font-size: medium;
+}
+
+.cardLineContent--img{
+    padding-top: 0px;
 }

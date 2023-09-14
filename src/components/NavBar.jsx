@@ -1,5 +1,9 @@
 function NavBar() {
-  return <nav>This is NavBar</nav>;
+  return (
+    <nav>
+      <img src="./images/gbnb-logo.png" />
+    </nav>
+  );
 }
 
 export default NavBar;
