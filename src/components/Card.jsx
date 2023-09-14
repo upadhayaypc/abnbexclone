@@ -1,24 +1,33 @@
 function Card() {
   return (
-    <section>
-      <img src="./images/gbnb-card.png" alt="card" />
+    <div className="card">
+      <img
+        src="./images/gbnb-katie-zaferes.png"
+        alt="card-image"
+        className="card--image"
+      />
       <CardLineContent />
-    </section>
+      <p>Life lessons with Katie Zaferes</p>
+      <p>
+        <span className="bold">From $136</span> / person
+      </p>
+    </div>
   );
 }
 
 function CardLineContent() {
   return (
-    <section>
+    <div className="card--stats">
       <img
-        className="cardLineContent cardLineContent--img"
+        className="card--star"
         src="./images/gbnb-red-star.png"
-        alt="red-star"
+        alt="card-star"
       />
-      <span className="cardLineContent">5.0</span>
-      <span className="cardLineContent">6</span>
-      <span className="cardLineContent">(USA)</span>
-    </section>
+
+      <span>5.0</span>
+      <span className="gray">(6) . </span>
+      <span className="gray">USA</span>
+    </div>
   );
 }
 
