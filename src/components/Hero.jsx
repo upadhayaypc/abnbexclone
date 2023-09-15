@@ -3,7 +3,7 @@ function Hero() {
     <section>
       <img
         className="hero"
-        src="./images/gbnb-hero.png"
+        src="./public/images/gbnb-hero.png"
         alt="greenbnb hero image"
       />
       <h1 className="hero--header">Online Experiences</h1>

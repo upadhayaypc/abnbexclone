@@ -1,32 +1,36 @@
-function Card() {
+function Card(props) {
   return (
     <div className="card">
       <img
-        src="./images/gbnb-katie-zaferes.png"
-        alt="card-image"
+        src={`./public/images/` + props.img}
+        alt={props.alt}
         className="card--image"
       />
-      <CardLineContent />
-      <p>Life lessons with Katie Zaferes</p>
+      <CardLineContent
+        rating={props.rating}
+        reviews={props.reviews}
+        location={props.location}
+      />
+      <p>{props.title}</p>
       <p>
-        <span className="bold">From $136</span> / person
+        <span className="bold">From ${props.price}</span> / person
       </p>
     </div>
   );
 }
 
-function CardLineContent() {
+function CardLineContent(childProps) {
   return (
     <div className="card--stats">
       <img
         className="card--star"
-        src="./images/gbnb-red-star.png"
+        src="./public/images/gbnb-red-star.png"
         alt="card-star"
       />
 
-      <span>5.0</span>
-      <span className="gray">(6) . </span>
-      <span className="gray">USA</span>
+      <span>{childProps.rating}</span>
+      <span className="gray">({childProps.reviews}) . </span>
+      <span className="gray">{childProps.location}</span>
     </div>
   );
 }

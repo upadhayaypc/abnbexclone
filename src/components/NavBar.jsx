@@ -1,7 +1,7 @@
 function NavBar() {
   return (
     <nav>
-      <img src="./images/gbnb-logo.png" />
+      <img src="./public/images/gbnb-logo.png" />
     </nav>
   );
 }
