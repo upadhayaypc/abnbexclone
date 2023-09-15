@@ -6,23 +6,13 @@ console.log(cardData);
 
 function App() {
   const cards = cardData.map((item) => {
-    return (
-      <Card
-        img={item.cardImg}
-        alt={item.cardAlt}
-        title={item.title}
-        rating={item.stats.rating}
-        reviews={item.stats.reviews}
-        location={item.location}
-        price={item.price}
-      />
-    );
+    return <Card key={item.id} {...item} />;
   });
   return (
     <>
       <NavBar />
       <Hero />
-      {cards}
+      <section className="cards-list">{cards}</section>
     </>
   );
 }

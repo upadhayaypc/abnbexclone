@@ -1,18 +1,26 @@
 function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
       <img
-        src={`./public/images/` + props.img}
-        alt={props.alt}
+        src={`./public/images/` + props.cardImg}
+        alt={props.cardAlt}
         className="card--image"
       />
       <CardLineContent
-        rating={props.rating}
-        reviews={props.reviews}
+        rating={props.stats.rating}
+        reviews={props.stats.reviews}
         location={props.location}
       />
-      <p>{props.title}</p>
-      <p>
+      <p className="card--title">{props.title}</p>
+      <p className="card--price">
         <span className="bold">From ${props.price}</span> / person
       </p>
     </div>
